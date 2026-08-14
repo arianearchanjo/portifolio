@@ -4,6 +4,12 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  // ── HOME INTRO ──
+  const introScreen = document.getElementById('introScreen');
+  if (introScreen) {
+    window.setTimeout(() => introScreen.remove(), 3000);
+  }
+
   // ── PIXEL METER ──
   document.querySelectorAll('.pixel-meter').forEach(el => {
     const level = parseInt(el.dataset.level, 10) || 0;
@@ -16,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ── REVEAL ON SCROLL ──
-  const revealSelector = '.window, .hero-body, .sobre-grid, .skills-grid, .projects-carousel, .timeline-cols, .highlights-grid, .certs-grid, .contact-wrapper';
+  const revealSelector = '.window, .hero-body, .sobre-grid, .skills-grid, .projects-carousel, .press-feature, .municipal-grid, .timeline-cols, .highlights-grid, .certs-grid, .contact-wrapper';
   const revealEls = document.querySelectorAll(revealSelector);
 
   function isInView(el) {
@@ -60,13 +66,12 @@ document.addEventListener('DOMContentLoaded', () => {
   menu.setAttribute('role', 'menu');
   menu.setAttribute('aria-label', 'Menu de navegação rápida');
   menu.innerHTML = `
-    <button type="button" class="start-menu-item" role="menuitem" data-target="#sobre"><i class="fas fa-user" aria-hidden="true"></i> Sobre</button>
-    <button type="button" class="start-menu-item" role="menuitem" data-target="#skills"><i class="fas fa-code" aria-hidden="true"></i> Skills</button>
-    <button type="button" class="start-menu-item" role="menuitem" data-target="#projetos"><i class="fas fa-folder-open" aria-hidden="true"></i> Projetos</button>
-    <button type="button" class="start-menu-item" role="menuitem" data-target="#experiencia"><i class="fas fa-road" aria-hidden="true"></i> Trajetória</button>
-    <button type="button" class="start-menu-item" role="menuitem" data-target="#certificados"><i class="fas fa-certificate" aria-hidden="true"></i> Cursos</button>
+    <a class="start-menu-item" role="menuitem" href="index.html"><i class="fas fa-house" aria-hidden="true"></i> Início</a>
+    <a class="start-menu-item" role="menuitem" href="setor-publico.html"><i class="fas fa-landmark" aria-hidden="true"></i> Setor público</a>
+    <a class="start-menu-item" role="menuitem" href="projetos.html"><i class="fas fa-folder-open" aria-hidden="true"></i> Projetos</a>
+    <a class="start-menu-item" role="menuitem" href="perfil.html"><i class="fas fa-user" aria-hidden="true"></i> Perfil &amp; trajetória</a>
     <div class="start-menu-sep" role="separator"></div>
-    <button type="button" class="start-menu-item" role="menuitem" data-target="#contato"><i class="fas fa-envelope" aria-hidden="true"></i> Contato</button>
+    <a class="start-menu-item" role="menuitem" href="index.html#contato"><i class="fas fa-envelope" aria-hidden="true"></i> Contato</a>
   `;
   document.body.appendChild(menu);
 
