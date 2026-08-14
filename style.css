@@ -1427,8 +1427,7 @@ body {
 .projects-static-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; }
 .projects-static-grid .proj-slide { max-width:none; padding:0; }
 .projects-static-grid .proj-slide .proj-window { height:auto; min-height:0; }
-.projects-static-grid .proj-window.text-only .proj-body { justify-content:center; min-height:270px; padding:28px; background:linear-gradient(145deg,#fff,var(--blue-pale)); }
-.text-project-mark { width:58px; height:58px; display:grid; place-items:center; margin-bottom:28px; border:2px solid var(--blue-mid); border-radius:14px; background:var(--blue-light); color:var(--blue); font-size:1.35rem; box-shadow:3px 3px 0 var(--blue-deep); }
+.projects-static-grid .narrative-image img { object-position:top center; }
 .page-back { display:inline-flex; align-items:center; gap:7px; margin-bottom:20px; font-size:.72rem; font-weight:700; color:var(--blue); }
 .start-menu-item { text-decoration:none; }
 
